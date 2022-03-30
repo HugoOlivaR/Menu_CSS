@@ -56,6 +56,24 @@ body{
     transform: translate(calc(60px * var(--x)),calc(60px * var(--y)));
 }
 
+.spansol{
+    visibility: inherit;
+}
+
+.sol{
+    visibility: inherit;
+    transition: ease 0.5s;
+}
+
+.spanmoon{
+    visibility: hidden;
+}
+
+.moon{
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
 .navigation span ion-icon{
     transition: 0.5s;
     font-size: 0em;

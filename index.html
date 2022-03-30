@@ -14,7 +14,8 @@
         <span style="--i:2;--x:0;--y:-1"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></span>
         <span style="--i:3;--x:0;--y:1"><ion-icon name="alarm-outline"></ion-icon></span>
         <span style="--i:4;--x:1;--y:1"><ion-icon name="game-controller-outline"></ion-icon></span>
-        <span style="--i:5;--x:-1;--y:-1"><ion-icon name="moon-outline"></ion-icon></span>
+        <span class="spansol" id="spansol" style="--i:5;--x:-1;--y:-1"><ion-icon onclick="switch_tema1()" id="sol" class="sol" name="sunny-outline"></ion-icon></span>
+        <span class="spanmoon" id="spanmoon" style="--i:5;--x:-1;--y:-1"><ion-icon onclick="switch_tema1()" id="moon" class="moon" name="moon-outline"></ion-icon></span>
         <span style="--i:6;--x:0;--y:0"><ion-icon name="notifications-outline"></ion-icon></span>
         <span style="--i:7;--x:-1;--y:1"><ion-icon name="rainy-outline"></ion-icon></span>
         <span style="--i:8;--x:1;--y:-1"><ion-icon name="timer-outline"></ion-icon></span>
@@ -24,10 +25,35 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
+
         let navigation = document.querySelector('.navigation');
         navigation.onclick = function(){
             navigation.classList.toggle('active')
         }
+
+        var sol= document.getElementById("sol");
+        var moon= document.getElementById("moon");
+        var spansol= document.getElementById("spansol");
+        var spanmoon= document.getElementById("spanmoon");
+
+        function switch_tema1(){
+            if(sol.style.visibility = "inherit"){
+                spansol.style.visibility = "hidden";
+                sol.style.visibility = "hidden";
+                spanmoon.style.visibility = "inherit";
+                moon.style.visibility = "inherit";
+            }else{
+                spansol.style.visibility = "inherit";
+                sol.style.visibility = "inherit";
+                spanmoon.style.visibility = "hidden";
+                moon.style.visibility = "hidden";
+            }
+
+        }
+
+
+
+
     </script>
 </body>
 </html>
